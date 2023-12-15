@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="exemple.css" />
+</head>
+<body>
+    <nav><a href="Mon%20CV.html">Accueil</a>
+         <a href="Exp%C3%A9riences.html">Expériences</a>
+          <a href="Contact.html"> Contact</a>  
+          <a href="Parcours%20Acad%C3%A9miques.html">Parcours académiques</a> 
+    </nav>
+    <header>
+        <h1>Mon Contact</h1>
+        <img src="./Images/Snapchat-1980677987.jpg" width="30%" height="20%"> 
+    </header>
+    <hr>
+    <main>
+        <section>
+            <h1>Ahmed Nour Allah Mejri</h1>
+            
+        <p>Adresse:Menzel jemil , Ville:Bizerte, Pays: Tunis</p>
+        <p>Téléphone : +216503775988</p>
+        <a href="https://mail.google.com/.tn">Email :mejriahmednourallah@gmail.com</a>
+        <p> just a hideen section to show my email</p>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        
+        <p>&copy; 2023 my site </p>
+    </footer>
+    <script>
+        
+        const emailLink = document.querySelector('a[href="https://mail.google.com/.tn"]');
+
+        
+        function displayConfirmationMessage(event) {
+            event.preventDefault(); 
+            const confirmed = confirm("Are you sure you want to send an email?");
+            if (confirmed) {
+                alert("Your email has been sent!");
+                
+                window.location.href = "mailto:mejriahmednourallah@gmail.com";
+            }
+        }
+
+       
+        emailLink.addEventListener('click', displayConfirmationMessage);
+    </script>
+</body>
+</html>

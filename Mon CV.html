@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mon CV</title>
+    <link rel="stylesheet" type="text/css" href="exemple.css" />
+</head>
+<body>
+    <nav><a href="Mon%20CV.html">Accueil</a>
+        <a href="Exp%C3%A9riences.html">Expériences</a>
+         <a href="Contact.html"> Contact</a>  
+         <a href="Parcours%20Acad%C3%A9miques.html">Parcours académiques</a> 
+   </nav>
+    <h1>Mon CV</h1>
+    <hr>
+    <img src="./Images/Snapchat-1980677987.jpg" width="30%" height="20%" id="zoom-image" class="zoom-img">
+    <header>
+        <h1>Ahmed Nour Allah Mejri</h1>
+        <p>Adresse:Menzel Jemil, Ville:Bizerte, Pays: Tunis</p>
+        <p>Téléphone : +21650377598</p>
+        <a href="https://mail.google.com/.tn">Email : mejriahmednourallah@gmail.com</a>
+    </header>
+
+    <section>
+        <h2>Formation</h2>
+        <p><strong>juin 2023 : Diplôme :preparatoire MP</strong></p>
+        <p>juin2020 : du baccalauréat -Section: Mathemathique</p>
+    </section>
+    
+    <section id="additional-info" style="display: none;">
+        <h2>Additional Information</h2>
+        <p>Project c :Theme transfusion sanguine </p>
+        <p>project web: </p>
+        <p>project micro: </p>
+    </section>
+    <button id="show-info">Show Additional Information</button>
+
+    <section>
+        <h2>Certifications</h2>
+        <p>- Certificat SolidWorks Associate.   </p>
+        <p>- Certificat Autocad Professional.   </p>
+        <p>-Anglais B2 IBlV</p>
+        <h2>Compétences</h2>
+        <ul>
+            <li>Langages de programmation: C , Python </li>
+            <li>Logiciels:Proteus ISIS, SolidWorks,MPLAB</li>
+            <li>Systèmes d’exploitation:  Windows, Linux</li>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 My site </p>
+    </footer>
+
+    <script>
+        
+        const showButton = document.getElementById('show-info');
+        const additionalInfo = document.getElementById('additional-info');
+        const zoomImage = document.getElementById('zoom-image');
+
+        
+        function toggleAdditionalInfo() {
+            if (additionalInfo.style.display === 'none') {
+                additionalInfo.style.display = 'block';
+                showButton.textContent = 'Hide Additional Information';
+            } else {
+                additionalInfo.style.display = 'none';
+                showButton.textContent = 'Show Additional Information';
+            }
+        }
+
+        function zoomIn() {
+            zoomImage.style.transform = 'scale(1.2)';
+        }
+
+        function resetZoom() {
+            zoomImage.style.transform = 'scale(1)';
+        }
+
+        showButton.addEventListener('click', toggleAdditionalInfo);
+        zoomImage.addEventListener('mouseenter', zoomIn);
+        zoomImage.addEventListener('mouseleave', resetZoom);
+    </script>
+</body>
+</html>
